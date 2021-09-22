@@ -1,5 +1,6 @@
 const sections = document.querySelectorAll('section[id]');
 const home = document.querySelector('.home');
+const toTop = document.querySelector('.top');
 
 function scrollActive() {
   const scrollY = window.pageYOffset;
@@ -33,6 +34,16 @@ function parallax(e) {
 window.addEventListener('scroll', () => {
   scrollActive();
   scrollHeader();
+  scrollY > 500 ? toTop.style.opacity = 1 : toTop.style.opacity = 0;
 });
 
 home.addEventListener('mousemove', parallax);
+
+toTop.addEventListener('click', () => {
+  scrollTo(0, 0);
+})
+
+$('.pic > li').hoverdir();
+// or with options
+// $('#da-thumbs > li').hoverdir({hoverDelay: 75, hoverElem: '.elem'});
+

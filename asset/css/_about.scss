@@ -1,0 +1,48 @@
+.about {
+  .pic {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 25%;
+      padding: .25rem;
+      position: relative;
+      counter-increment: item;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+
+      @include md {
+        width: 33.33%;
+      }
+
+      @include sm {
+        width: 50%;
+      }
+    }
+
+    &--hovereffect {
+      background-color: rgba(0, 0, 0, .7);
+      border: 5px solid orange;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &::after {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+        content: counter(item);
+      }
+    }
+  }
+}
