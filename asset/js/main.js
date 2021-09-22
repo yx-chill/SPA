@@ -44,6 +44,3 @@ toTop.addEventListener('click', () => {
 })
 
 $('.pic > li').hoverdir();
-// or with options
-// $('#da-thumbs > li').hoverdir({hoverDelay: 75, hoverElem: '.elem'});
-

@@ -36,6 +36,7 @@
     animation: scroll 2s infinite;
   }
 }
+
 .top {
   position: fixed;
   right: 3%;
@@ -43,6 +44,7 @@
   opacity: 0;
   cursor: pointer;
   transition: .4s;
+
   &:hover {
     transform: translateY(-50%);
   }
