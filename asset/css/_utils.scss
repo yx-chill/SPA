@@ -4,3 +4,20 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+.top {
+  position: fixed;
+  right: 3%;
+  bottom: 5%;
+  opacity: 0;
+  cursor: pointer;
+  transition: .4s;
+
+  &:hover {
+    transform: translateY(-50%);
+  }
+
+  @include md {
+    bottom: 20%;
+  }
+}

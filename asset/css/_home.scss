@@ -37,19 +37,6 @@
   }
 }
 
-.top {
-  position: fixed;
-  right: 3%;
-  bottom: 5%;
-  opacity: 0;
-  cursor: pointer;
-  transition: .4s;
-
-  &:hover {
-    transform: translateY(-50%);
-  }
-}
-
 @keyframes scroll {
   0% {
     top: 80%;

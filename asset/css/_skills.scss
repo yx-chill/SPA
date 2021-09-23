@@ -1,0 +1,13 @@
+.skills {
+  background: linear-gradient(#3b3b3b, #535353);
+
+  .section__title {
+    color: #3b3b3b;
+    text-shadow: 1px 1px black, -1px -1px white;
+  }
+
+  p {
+    user-select: none;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,5 +1,6 @@
 const sections = document.querySelectorAll('section[id]');
 const home = document.querySelector('.home');
+const about = document.querySelector('.about');
 const toTop = document.querySelector('.top');
 
 function scrollActive() {
@@ -23,12 +24,19 @@ function scrollHeader() {
 }
 
 function parallax(e) {
-  this.querySelectorAll('.layer').forEach((layer => {
+  this.querySelectorAll('.layer').forEach((layer) => {
     const speed = layer.getAttribute('data-speed');
     const x = (window.innerWidth - e.pageX * speed) / 100;
     const y = (window.innerHeight - e.pageY * speed) / 100;
     layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-  }))
+  })
+}
+function rotate(e) {
+  this.querySelectorAll('.layer').forEach((layer) => {
+    const x = ((window.innerWidth - e.pageX) / 100) + 20;
+    const y = ((window.innerHeight - e.pageY) / 100) + 30;
+    layer.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+  })
 }
 
 window.addEventListener('scroll', () => {
@@ -38,7 +46,7 @@ window.addEventListener('scroll', () => {
 });
 
 home.addEventListener('mousemove', parallax);
-
+about.addEventListener('mousemove', rotate);
 toTop.addEventListener('click', () => {
   scrollTo(0, 0);
 })
